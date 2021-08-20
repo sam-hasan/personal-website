@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     <div>
       <div className="w-9/12 mx-auto flex flex-col items-center">
-        <div className="uppercase pt-6 text-3xl font-normal linear-gradient antialiased">
+        <div className="uppercase pt-5 text-3xl font-normal antialiased">
           <h1>Syed Sameer Hasan, CS Student</h1>
         </div>
       </div>
