@@ -1,7 +1,14 @@
 import React from 'react';
+import Header from './components/Header';
+import HomePage from './pages/HomePage';
 
 const App = () => {
-  return <div className="text-4xl">Hi there</div>;
+  return (
+    <div>
+      <Header />
+      <HomePage />
+    </div>
+  );
 };
 
 export default App;
