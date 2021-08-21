@@ -6,13 +6,28 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.linear-gradient {
+.text-gradient {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: #0beef9;
-  background-image: linear-gradient(315deg, #0beef9 0%, #48a9fe 74%);
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+}
+
+.font-awesome {
+  color: #3edbf0;
+  font-size: 56px;
+}
+
+.mfizz-icons {
+  color: #3edbf0;
+  font-size: 56px;
+  margin-top: -10px;
 }
 
 .hover-cyan:hover {
-  color: #0fc4ce;
+  color: #3edbf0;
+}
+
+.heading-color {
+  color: rgb(1, 162, 184);
 }
