@@ -8,7 +8,7 @@ const HomePage = () => {
           <h1>Syed Sameer Hasan, CS Student</h1>
         </div>
       </div>
-      <div className="w-10/12 mx-auto py-10">
+      <div className="w-10/12 mx-auto pt-8 pb-12">
         <img src="/images/hero.jpeg" alt="hero"></img>
       </div>
     </div>
