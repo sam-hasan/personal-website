@@ -1,8 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { send } from 'emailjs-com';
 
 const ContactForm = () => {
-  const submitHandler = () => {
-    console.log('message received');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [phone, setPhone] = useState(null);
+  const [replyTo, setReplyTo] = useState('');
+  const [message, setMessage] = useState('');
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const sendForm = {
+    from_name: `${firstName} ${lastName}`,
+    phone,
+    reply_to: replyTo,
+    message,
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      sendForm,
+      process.env.REACT_APP_EMAILJS_USER_ID
+    )
+      .then((res) => {
+        setSubmitMessage('Thanks for submitting!');
+        setFirstName('');
+        setLastName('');
+        setReplyTo('');
+        setMessage('');
+        setPhone('');
+      })
+      .catch((err) => {
+        setSubmitMessage('Message not sent. Please try again.');
+      });
   };
   return (
     <div className="container mx-auto antialiased">
@@ -11,6 +44,9 @@ const ContactForm = () => {
           <h1 className="my-2 text-2xl text-gray-700 dark:text-gray-200">
             Leave a Message
           </h1>
+          <p className="font-semibold italic">
+            *abuse of this system will be reported
+          </p>
         </div>
 
         <div className="m-7">
@@ -25,25 +61,29 @@ const ContactForm = () => {
                 </label>
                 <input
                   type="text"
-                  name="firstName"
+                  name="from_name"
                   id="firstName"
                   placeholder="First name"
                   className="w-full px-3 py-3 placeholder-gray-300 bg-gray-100 focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                  //   value={toSend.from_name}
+                  onChange={(e) => setFirstName(e.target.value)}
                   required
                 />
               </div>
               <div className="mb-6 w-6/12 ml-2">
                 <label
-                  for="Phone"
+                  for="lastName"
                   className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
                 >
                   Last Name
                 </label>
                 <input
                   type="text"
-                  name="Phone"
-                  id="Phone"
+                  name="from_name"
+                  id="lastName"
                   placeholder="Last name"
+                  onChange={(e) => setLastName(e.target.value)}
+                  //   value={toSend.from_name.split[1]}
                   className="w-full px-3 py-3 placeholder-gray-300 bg-gray-100 focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                   required
                 />
@@ -59,9 +99,11 @@ const ContactForm = () => {
                 </label>
                 <input
                   type="email"
-                  name="email"
+                  name="reply_to"
                   id="email"
                   placeholder="Email"
+                  //   value={toSend.reply_to}
+                  onChange={(e) => setReplyTo(e.target.value)}
                   className="w-full px-3 py-3 placeholder-gray-300 bg-gray-100 focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                   required
                 />
@@ -76,11 +118,12 @@ const ContactForm = () => {
                 </label>
                 <input
                   type="number"
-                  name="Phone"
+                  name="phone"
                   id="Phone"
                   placeholder="Phone"
+                  //   value={toSend.phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   className="w-full px-3 py-3 placeholder-gray-300 bg-gray-100 focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                  required
                 />
               </div>
             </div>
@@ -95,23 +138,32 @@ const ContactForm = () => {
                 </label>
               </div>
               <textarea
-                rows="8"
+                rows="6"
                 type="text"
                 name="message"
                 id="message"
                 placeholder="Type your message here..."
+                // value={toSend.message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="w-full px-3 py-3 placeholder-gray-300 bg-gray-100 focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                 required
               />
             </div>
 
-            <div className="mb-2">
+            <div className="mb-2 flex">
               <button
                 type="submit"
-                className=" px-6 py-3 text-white cyan-background transform hover:scale-105 focus:scale-100 motion-reduce:transform-none duration-300 focus:outline-none"
+                className="block px-6 py-3 text-white cyan-background transform hover:scale-105 focus:scale-100 motion-reduce:transform-none duration-300 focus:outline-none"
               >
                 Submit
               </button>
+              <div className="ml-4 mt-3">
+                {submitMessage === 'Thanks for submitting!' ? (
+                  <p className="text-green-500">{submitMessage}</p>
+                ) : (
+                  <p className="text-red-600">{submitMessage}</p>
+                )}
+              </div>
             </div>
           </form>
         </div>

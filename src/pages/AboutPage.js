@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutPage = () => {
   return (
-    <div className="w-6/12 mx-auto flex flex-col items-start pt-16 pb-16 antialiased">
+    <div className="lg:w-6/12 sm:px-10 md:px-10 md:w-screen mx-auto flex flex-col items-start pt-16 pb-16 antialiased">
       <div>
         <h1 className="text-2xl pb-4 font-normal text-gray-800">About Me</h1>
       </div>

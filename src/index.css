@@ -39,3 +39,13 @@ body {
 .cyan-border {
   border-color: #22def7;
 }
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 750ms ease-in;
+}
