@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <div>
       <div className="lg:w-9/12 sm:w-screen md:w-screen mx-auto flex flex-col items-center">
-        <div className="uppercase pt-16 text-3xl font-normal antialiased text-gray-800 animate__animated animate__fadeInDown">
+        <div className="uppercase pt-16 lg:text-3xl md:text-3xl sm:2xl font-normal antialiased text-gray-800 animate__animated animate__fadeInDown">
           <h1>Syed Sameer Hasan, CS Student</h1>
         </div>
       </div>
