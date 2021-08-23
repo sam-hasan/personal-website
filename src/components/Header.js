@@ -17,10 +17,10 @@ const Header = () => {
         About
       </Link>
       <Link
-        to="/work-experience"
+        to="/bio"
         className="lg:mx-9 sm:mx-4 transform duration-200 hover-cyan"
       >
-        Work Experience
+        Bio
       </Link>
       <Link
         to="/projects"

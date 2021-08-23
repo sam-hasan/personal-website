@@ -13,13 +13,17 @@ body {
   background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
 }
 
+.body-text {
+  font-size: 15px;
+}
+
 .font-awesome {
-  color: #3edbf0;
+  color: #10e3ff;
   font-size: 56px;
 }
 
 .mfizz-icons {
-  color: #3edbf0;
+  color: #10e3ff;
   font-size: 56px;
   margin-top: -10px;
 }
@@ -28,6 +32,10 @@ body {
   color: #3edbf0;
 }
 
-.heading-color {
-  color: rgb(1, 162, 184);
+.cyan-background {
+  background-color: #22def7;
+}
+
+.cyan-border {
+  border-color: #22def7;
 }

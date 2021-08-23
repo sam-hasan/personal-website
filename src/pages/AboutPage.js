@@ -2,11 +2,11 @@ import React from 'react';
 
 const AboutPage = () => {
   return (
-    <div className="w-6/12 mx-auto flex flex-col items-start pt-16 pb-12 antialiased">
+    <div className="w-6/12 mx-auto flex flex-col items-start pt-16 pb-16 antialiased">
       <div>
-        <h1 className="text-3xl pb-6 font-normal text-gray-800">About Me</h1>
+        <h1 className="text-2xl pb-4 font-normal text-gray-800">About Me</h1>
       </div>
-      <div className="text-gray-700">
+      <div className="text-gray-800 leading-loose body-text font-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit
         amet sem consectetur, mollis ipsum nec, pellentesque eros. Maecenas eu
         dui turpis. Aliquam sit amet sagittis odio. Nulla vulputate urna mi, ac
@@ -23,7 +23,7 @@ const AboutPage = () => {
         mauris. Etiam euismod dui augue, at auctor dolor venenatis vel.
       </div>
       <div>
-        <h1 className="text-3xl pb-6 pt-16 font-normal text-gray-800">
+        <h1 className="text-2xl pb-4 pt-16 font-normal text-gray-800">
           Skills
         </h1>
       </div>
