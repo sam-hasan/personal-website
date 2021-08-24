@@ -42,7 +42,7 @@ const AboutPage = () => {
       </div>
       <h3 className="pt-6 text-gray-600">Technologies</h3>
 
-      <div className="flex flex-wrap justify-center mt-4 space-x-6">
+      <div className="flex flex-wrap justify-center items-center mt-4 space-x-6">
         <div>
           <i class="fab fa-node font-awesome"></i>
         </div>

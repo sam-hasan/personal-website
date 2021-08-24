@@ -39,7 +39,7 @@ const ContactForm = () => {
   };
   return (
     <div className="container mx-auto antialiased">
-      <div className="max-w-2xl mx-auto my-10">
+      <div className="max-w-2xl mx-auto my-10 xs:my-0">
         <div className="text-center">
           <h1 className="my-2 text-2xl text-gray-700 dark:text-gray-200">
             Leave a Message
