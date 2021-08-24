@@ -2,7 +2,7 @@ import React from 'react';
 
 const WorkExperiencePage = () => {
   return (
-    <div className="xs:w-screen xs:px-3 lg:w-6/12 md:w-screen sm:px-10 mx-auto flex flex-col items-start pt-16 pb-16 antialiased">
+    <div className="xs:w-screen xs:px-3 lg:w-7/12 md:w-screen sm:px-10 mx-auto flex flex-col items-start pt-16 pb-16 antialiased">
       {/* Work Experience */}
       <div className="w-full flex flex-row justify-between border-solid	border-b-2 cyan-border">
         <div className="3/12 text-2xl xs:text-xl">Work Experience</div>
