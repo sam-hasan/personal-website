@@ -1,14 +1,14 @@
 import React from 'react';
 
-const WorkExperiencePage = () => {
+const BioPage = () => {
   return (
     <div className="xs:w-screen xs:px-3 lg:w-10/12 xl:w-7/12 md:w-screen sm:px-10 mx-auto flex flex-col items-start pt-16 pb-16 antialiased">
       {/* Work Experience */}
-      <div className="w-full flex flex-row justify-between border-solid	border-b-2 cyan-border">
-        <div className="3/12 text-2xl xs:text-xl">
-          Work <br /> Experience
+      <div className="w-full flex flex-row xs:flex-col justify-between border-solid	border-b-2 cyan-border">
+        <div className="w-3/12 text-2xl xs:w-full xs:mb-4 xs:text-2xl xs:font-bold">
+          Work Experience
         </div>
-        <div className="w-9/12 flex flex-col">
+        <div className="w-9/12 xs:w-full flex flex-col">
           {/* Work Experience 1 */}
           <div className="mb-8">
             <div className="text-2xl mb-4 flex justify-between">
@@ -33,7 +33,9 @@ const WorkExperiencePage = () => {
           {/* Work Experience 2 */}
           <div className="mb-10">
             <div className="text-2xl xs:text-xl mb-4 flex justify-between">
-              <div className="text-2xl xs:text-xl">Dalhousie University </div>
+              <div className="text-2xl xs:w-full xs:mb-4 xs:text-2xl xs:font-bold">
+                Dalhousie University{' '}
+              </div>
               <div className="font-light text-lg xs:text-base">Halifax, NS</div>
             </div>
             <p className="mb-6 text-gray-600">
@@ -53,9 +55,11 @@ const WorkExperiencePage = () => {
         </div>
       </div>
       {/* Education */}
-      <div className="w-full flex flex-row justify-between pt-10 border-solid	border-b-2 cyan-border">
-        <div className="3/12 text-2xl xs:text-xl">Education</div>
-        <div className="w-9/12 flex flex-col">
+      <div className="w-full flex flex-row xs:flex-col justify-between pt-10 border-solid	border-b-2 cyan-border">
+        <div className="w-3/12 text-2xl xs:w-full xs:text-xl xs:mb-4 xs:text-2xl xs:font-bold">
+          Education
+        </div>
+        <div className="w-9/12 xs:w-full flex flex-col">
           {/* School 1 */}
           <div className="mb-10">
             <div className="text-2xl mb-4 flex justify-between">
@@ -76,9 +80,11 @@ const WorkExperiencePage = () => {
         </div>
       </div>
       {/* Volunteering */}
-      <div className="w-full flex flex-row justify-between pt-10">
-        <div className="3/12 text-2xl xs:text-xl xs:mr-2">Volunteering</div>
-        <div className="w-9/12 flex flex-col">
+      <div className="w-full xs:flex-col flex flex-row justify-between pt-10">
+        <div className="w-3/12 text-2xl xs:w-full xs:text-xl xs:mb-4 xs:text-2xl xs:font-bold xs:text-xl xs:mr-2">
+          Volunteering
+        </div>
+        <div className="w-9/12 xs:w-full flex flex-col">
           {/* Volunteering 1 */}
           <div className="mb-10">
             <div className="text-2xl mb-4 flex justify-between">
@@ -127,4 +133,4 @@ const WorkExperiencePage = () => {
   );
 };
 
-export default WorkExperiencePage;
+export default BioPage;
