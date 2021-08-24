@@ -5,7 +5,7 @@ const BioPage = () => {
     <div className="xs:w-screen xs:px-3 lg:w-10/12 xl:w-7/12 md:w-screen sm:px-10 mx-auto flex flex-col items-start pt-16 pb-16 antialiased">
       {/* Work Experience */}
       <div className="w-full flex flex-row xs:flex-col justify-between border-solid	border-b-2 cyan-border">
-        <div className="w-3/12 text-2xl xs:w-full xs:mb-4 xs:text-2xl xs:font-bold">
+        <div className="w-2/12 text-2xl xs:w-full xs:mb-4 xs:text-2xl xs:font-bold">
           Work Experience
         </div>
         <div className="w-9/12 xs:w-full flex flex-col">
