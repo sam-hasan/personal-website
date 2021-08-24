@@ -2,16 +2,18 @@ import React from 'react';
 
 const WorkExperiencePage = () => {
   return (
-    <div className="lg:w-6/12 md:w-screen sm:px-10 mx-auto flex flex-col items-start pt-16 pb-16 antialiased">
+    <div className="xs:w-screen xs:px-3 lg:w-6/12 md:w-screen sm:px-10 mx-auto flex flex-col items-start pt-16 pb-16 antialiased">
       {/* Work Experience */}
       <div className="w-full flex flex-row justify-between border-solid	border-b-2 cyan-border">
-        <div className="3/12 text-2xl">Work Experience</div>
+        <div className="3/12 text-2xl xs:text-xl">Work Experience</div>
         <div className="w-9/12 flex flex-col">
           {/* Work Experience 1 */}
           <div className="mb-8">
             <div className="text-2xl mb-4 flex justify-between">
-              <div className="text-2xl">Some Company</div>
-              <div className="font-light text-lg">Someplace, SW</div>
+              <div className="text-2xl xs:text-xl">Some Company</div>
+              <div className="font-light text-lg xs:text-base">
+                Someplace, SW
+              </div>
             </div>
             <p className="mb-6 text-gray-600">
               Some Job &nbsp; • &nbsp; January 2021 - Present
@@ -28,9 +30,9 @@ const WorkExperiencePage = () => {
           </div>
           {/* Work Experience 2 */}
           <div className="mb-10">
-            <div className="text-2xl mb-4 flex justify-between">
-              <div className="text-2xl">Dalhousie University </div>
-              <div className="font-light text-lg">Halifax, NS</div>
+            <div className="text-2xl xs:text-xl mb-4 flex justify-between">
+              <div className="text-2xl xs:text-xl">Dalhousie University </div>
+              <div className="font-light text-lg xs:text-base">Halifax, NS</div>
             </div>
             <p className="mb-6 text-gray-600">
               Teaching Assistant for CSCI1170 &nbsp; • &nbsp; September 2021 -
@@ -50,13 +52,13 @@ const WorkExperiencePage = () => {
       </div>
       {/* Education */}
       <div className="w-full flex flex-row justify-between pt-10 border-solid	border-b-2 cyan-border">
-        <div className="3/12 text-2xl">Education</div>
+        <div className="3/12 text-2xl xs:text-xl">Education</div>
         <div className="w-9/12 flex flex-col">
           {/* School 1 */}
           <div className="mb-10">
             <div className="text-2xl mb-4 flex justify-between">
-              <div className="text-2xl">Dalhousie University </div>
-              <div className="font-light text-lg">Halifax, NS</div>
+              <div className="text-2xl xs:text-xl">Dalhousie University </div>
+              <div className="font-light text-lg xs:text-base">Halifax, NS</div>
             </div>
             <p className="mb-6 text-gray-600">GPA: 4.3</p>
             <p className="text-black leading-loose body-text font-light">
@@ -73,13 +75,13 @@ const WorkExperiencePage = () => {
       </div>
       {/* Volunteering */}
       <div className="w-full flex flex-row justify-between pt-10">
-        <div className="3/12 text-2xl">Volunteering</div>
+        <div className="3/12 text-2xl xs:text-xl xs:mr-2">Volunteering</div>
         <div className="w-9/12 flex flex-col">
           {/* Volunteering 1 */}
           <div className="mb-10">
             <div className="text-2xl mb-4 flex justify-between">
-              <div className="text-2xl">Dalhousie University</div>
-              <div className="font-light text-lg">Halifax, NS</div>
+              <div className="text-2xl xs:text-xl">Dalhousie University</div>
+              <div className="font-light text-lg xs:text-base">Halifax, NS</div>
             </div>
             <p className="mb-6 text-gray-600">
               Course Representative for CSCI1170 &nbsp; • &nbsp; January 2021 -
@@ -99,8 +101,10 @@ const WorkExperiencePage = () => {
           {/* Volunteering 2 */}
           <div className="mb-10">
             <div className="text-2xl mb-4 flex justify-between">
-              <div className="text-2xl">The Rotoract Club of Halifax</div>
-              <div className="font-light text-lg">Halifax, NS</div>
+              <div className="text-2xl xs:text-xl">
+                The Rotoract Club of Halifax
+              </div>
+              <div className="font-light text-lg xs:text-base">Halifax, NS</div>
             </div>
             <p className="mb-6 text-gray-600">
               Member &nbsp; • &nbsp; September 2020 - Present

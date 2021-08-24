@@ -2,9 +2,11 @@ import React from 'react';
 
 const AboutPage = () => {
   return (
-    <div className="lg:w-6/12 sm:px-10 md:px-10 md:w-screen mx-auto flex flex-col items-start pt-16 pb-16 antialiased">
+    <div className="lg:w-6/12 sm:px-10 md:px-10 xs:px-10 xs:w-screen md:w-screen mx-auto flex flex-col items-start pt-16 pb-16 antialiased">
       <div>
-        <h1 className="text-2xl pb-4 font-normal text-gray-800">About Me</h1>
+        <h1 className="xs:pb-2 text-2xl pb-4 font-normal text-gray-800">
+          About Me
+        </h1>
       </div>
       <div className="text-gray-800 leading-loose body-text font-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit
@@ -27,7 +29,7 @@ const AboutPage = () => {
           Skills
         </h1>
       </div>
-      <h3 className="text-gray-600">Programming</h3>
+      <h3 className="xs:text-sm text-gray-600">Programming</h3>
       <div className="flex justify-center mt-4 space-x-6">
         <i class="fab fa-java font-awesome"></i>
         <i class="fab fa-js font-awesome"></i>
@@ -39,17 +41,32 @@ const AboutPage = () => {
         <ion-icon name="logo-html5"></ion-icon> */}
       </div>
       <h3 className="pt-6 text-gray-600">Technologies</h3>
-      <div className="flex justify-center mt-4 space-x-6">
-        <i class="fab fa-node font-awesome"></i>
-        <i class="fab fa-react font-awesome"></i>
-        <i class="fab fa-aws font-awesome"></i>
-        <i class="icon-mongodb mfizz-icons"></i>
-        <span
-          class="iconify font-awesome"
-          data-icon="simple-icons:redux"
-        ></span>
-        <i class="fab fa-git-alt font-awesome"></i>
-        <i class="fab fa-sass font-awesome"></i>
+
+      <div className="flex flex-wrap justify-center mt-4 space-x-6">
+        <div>
+          <i class="fab fa-node font-awesome"></i>
+        </div>
+        <div>
+          <i class="fab fa-react font-awesome"></i>
+        </div>
+        <div>
+          <i class="fab fa-aws font-awesome"></i>
+        </div>
+        <div>
+          <i class="icon-mongodb mfizz-icons"></i>
+        </div>
+        <div>
+          <span
+            class="iconify font-awesome"
+            data-icon="simple-icons:redux"
+          ></span>
+        </div>
+        <div>
+          <i class="fab fa-git-alt font-awesome"></i>
+        </div>
+        <div>
+          <i class="fab fa-sass font-awesome"></i>
+        </div>
       </div>
     </div>
   );

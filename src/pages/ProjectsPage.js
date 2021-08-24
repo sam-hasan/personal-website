@@ -3,7 +3,7 @@ import Project from '../components/Project';
 
 const ProjectsPage = () => {
   return (
-    <div className="lg:w-7/12 sm:px-4 mx-auto flex flex-col items-center justify-center pt-16 pb-16 antialiased">
+    <div className="xs:w-screen lg:w-7/12 sm:px-4 mx-auto flex flex-col items-center justify-center pt-16 pb-16 antialiased">
       <div className="flex lg:flex-row sm:flex-col self-center justify-center flex-wrap">
         <Project
           image="./images/samnotes.png"

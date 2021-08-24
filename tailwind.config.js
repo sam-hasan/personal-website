@@ -4,14 +4,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
-      sm: '576px',
-      // => @media (min-width: 640px) { ... }
-
-      md: '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      lg: '1280px',
-      // => @media (min-width: 1280px) { ... }
+      xs: { max: '576px' },
+      sm: { min: '576px' },
+      md: { min: '768px' },
+      lg: { min: '992px' },
+      xl: { min: '1200px' },
+      xxl: { min: '1400px' },
     },
     borderWidth: {
       DEFAULT: '1px',
